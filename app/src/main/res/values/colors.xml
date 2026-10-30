@@ -1,7 +1,9 @@
 <resources>
     <color name="screen_background">#FFF7FF</color>
-    <color name="panel_background">#FFF7FF</color>
-    <color name="topic_label">#202020</color>
-    <color name="button_neutral">#D9D9D9</color>
-    <color name="banner_scrim">#00000000</color>
+    <color name="green">#1B5E20</color>
+    <color name="light_green">#66BB6A</color>
+    <color name="panel_background">@color/green</color>
+    <color name="topic_label">#FFFFFF</color>
+    <color name="banner_scrim">#99000000</color>
+    <color name="launcher_background">#FFFFFF</color>
 </resources>
