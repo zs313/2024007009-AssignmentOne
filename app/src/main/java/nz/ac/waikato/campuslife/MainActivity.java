@@ -1,5 +1,6 @@
 package nz.ac.waikato.campuslife;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -12,6 +13,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 /** The Java entry point for the assignment's XML-based home screen. */
 public class MainActivity extends AppCompatActivity {
+
+    public static final String EXTRA_TOPIC_INDEX = "nz.ac.waikato.campuslife.TOPIC_INDEX";
+    public static final String EXTRA_TOPIC_NAME = "nz.ac.waikato.campuslife.TOPIC_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +34,30 @@ public class MainActivity extends AppCompatActivity {
 
     // XML onClick handlers must be public and accept the clicked View.
     public void onFacilitiesClick(View view) {
-        showTopicClick(view);
+        openDetail(view);
     }
 
     public void onEventsClick(View view) {
-        showTopicClick(view);
+        openDetail(view);
     }
 
     public void onClubsClick(View view) {
-        showTopicClick(view);
+        openDetail(view);
     }
 
     public void onSupportClick(View view) {
+        openDetail(view);
+    }
+
+    private void openDetail(View view) {
         showTopicClick(view);
+
+        // Both XML layouts use tags 0..3 in the supplied arrays' topic order.
+        // A shared explicit Intent keeps all four handlers consistent.
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(EXTRA_TOPIC_INDEX, Integer.parseInt(view.getTag().toString()));
+        intent.putExtra(EXTRA_TOPIC_NAME, view.getContentDescription().toString());
+        startActivity(intent);
     }
 
     private void showTopicClick(View view) {
