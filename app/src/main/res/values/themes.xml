@@ -1,9 +1,9 @@
 <resources>
-    <style name="Theme.AssignmentOne" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.AssignmentOne" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">@color/screen_background</item>
         <item name="android:fontFamily">sans</item>
     </style>
+    <style name="Theme.AssignmentOne" parent="Base.Theme.AssignmentOne" />
 </resources>

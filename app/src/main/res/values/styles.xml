@@ -1,17 +1,16 @@
 <resources>
-    <!-- The image takes four shares and its caption one share of each service cell. -->
+    <!-- Captions keep their natural height; the image fills each cell's remaining space. -->
     <style name="Widget.CampusLife.TopicButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">4</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/topic_button_selector</item>
         <item name="android:scaleType">fitCenter</item>
     </style>
 
     <style name="Widget.CampusLife.TopicLabel" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Material.Body1</item>
         <item name="android:textColor">@color/topic_label</item>

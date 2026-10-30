@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/detail_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screen_background"
     android:orientation="vertical">
-
     <!-- The banner receives one third of the available height in either orientation. -->
     <FrameLayout
         android:layout_width="match_parent"
@@ -45,7 +44,6 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </FrameLayout>
-
     <!-- Proportional side gutters keep long text readable without fixed margins. -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,7 +80,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/placeholder_content"
                     android:textAppearance="@android:style/TextAppearance.Material.Body1"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:lineSpacingMultiplier="1.1" />
             </ScrollView>
         </LinearLayout>
         <Space

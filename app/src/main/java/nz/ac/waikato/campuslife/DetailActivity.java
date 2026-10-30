@@ -14,8 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 /** A reusable information screen with a banner and a scrollable content area. */
 public class DetailActivity extends AppCompatActivity {
 
-    @Override
     // The supplied image array contains names, so runtime resource lookup is intentional.
+    @Override
     @SuppressLint("DiscouragedApi")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

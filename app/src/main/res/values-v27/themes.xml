@@ -1,0 +1,6 @@
+<resources>
+    <!-- Dark navigation-bar icons were introduced in API 27. API 24 uses the base theme. -->
+    <style name="Theme.AssignmentOne" parent="Base.Theme.AssignmentOne">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>
