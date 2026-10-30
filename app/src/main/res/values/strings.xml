@@ -6,4 +6,6 @@
     <string name="clubs">Clubs</string>
     <string name="support">Support</string>
     <string name="topic_clicked">%1$s clicked</string>
+    <string name="placeholder_title">This is a title</string>
+    <string name="placeholder_content">This is content</string>
 </resources>
