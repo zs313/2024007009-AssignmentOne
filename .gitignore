@@ -1,0 +1,11 @@
+# Local machine settings, credentials and generated Android build output.
+.gradle/
+.kotlin/
+.idea/
+local.properties
+**/build/
+*.iml
+*.jks
+*.keystore
+.DS_Store
+captures/
