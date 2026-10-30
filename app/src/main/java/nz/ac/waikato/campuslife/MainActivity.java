@@ -1,6 +1,8 @@
 package nz.ac.waikato.campuslife;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -24,5 +26,27 @@ public class MainActivity extends AppCompatActivity {
             view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    // XML onClick handlers must be public and accept the clicked View.
+    public void onFacilitiesClick(View view) {
+        showTopicClick(view);
+    }
+
+    public void onEventsClick(View view) {
+        showTopicClick(view);
+    }
+
+    public void onClubsClick(View view) {
+        showTopicClick(view);
+    }
+
+    public void onSupportClick(View view) {
+        showTopicClick(view);
+    }
+
+    private void showTopicClick(View view) {
+        String message = getString(R.string.topic_clicked, view.getContentDescription());
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

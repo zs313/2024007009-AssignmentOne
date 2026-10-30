@@ -5,4 +5,5 @@
     <string name="events">Events</string>
     <string name="clubs">Clubs</string>
     <string name="support">Support</string>
+    <string name="topic_clicked">%1$s clicked</string>
 </resources>
