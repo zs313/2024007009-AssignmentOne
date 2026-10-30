@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Weights share the available screen space; 0dp here enables proportional sizing. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical">
+
+    <!-- Both orientations keep the banner separate from the service buttons. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_main_banner" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/banner_scrim"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/welcome_message"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </FrameLayout>
+
+    <!-- Landscape: all four services share one row. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/panel_background"
+        android:orientation="vertical">
+        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight=".06" /><LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"><Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight=".08" /><LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/button_facilities"
+            style="@style/Widget.CampusLife.TopicButton"
+            android:contentDescription="@string/facilities"
+            android:src="@drawable/img_btn_facilities"
+             />
+        <TextView
+            style="@style/Widget.CampusLife.TopicLabel"
+            android:labelFor="@id/button_facilities"
+            android:text="@string/facilities" />
+    </LinearLayout><Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight=".08" /><LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/button_events"
+            style="@style/Widget.CampusLife.TopicButton"
+            android:contentDescription="@string/events"
+            android:src="@drawable/img_btn_events"
+             />
+        <TextView
+            style="@style/Widget.CampusLife.TopicLabel"
+            android:labelFor="@id/button_events"
+            android:text="@string/events" />
+    </LinearLayout><Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight=".08" /><LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/button_clubs"
+            style="@style/Widget.CampusLife.TopicButton"
+            android:contentDescription="@string/clubs"
+            android:src="@drawable/img_btn_clubs"
+             />
+        <TextView
+            style="@style/Widget.CampusLife.TopicLabel"
+            android:labelFor="@id/button_clubs"
+            android:text="@string/clubs" />
+    </LinearLayout><Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight=".08" /><LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/button_support"
+            style="@style/Widget.CampusLife.TopicButton"
+            android:contentDescription="@string/support"
+            android:src="@drawable/img_btn_support"
+             />
+        <TextView
+            style="@style/Widget.CampusLife.TopicLabel"
+            android:labelFor="@id/button_support"
+            android:text="@string/support" />
+    </LinearLayout><Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight=".08" /></LinearLayout><Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight=".04" />
+    </LinearLayout>
+</LinearLayout>
